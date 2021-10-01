@@ -1,0 +1,360 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header-container,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* 
+Website Colors
+
+RED color #800E13
+WHITE color #F6F7EB
+BLUE color #004BA8
+YELLOW color #FFD400
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: .1em;
+}
+
+.menu-btn{
+    display: none;
+}
+
+body{
+    display: grid;
+        
+        grid-template-columns: 15% auto 15%;
+        grid-template-rows: 60px 40px auto 20px;
+        grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside main div"
+            "footer footer footer";
+    height: 100vh;
+    }
+
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    background-color: #800E13;
+    color: #F6F7EB;
+}
+
+header h1{
+    position: relative;
+}
+
+
+header h6{
+    display: block;
+    background-color: #000;
+    color: #F6F7EB;
+    position: absolute;
+    top: 43px;
+    left: 134px;
+}
+
+nav{
+    grid-area: nav;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #F6F7EB;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    height: 40px;
+}
+
+.menu :nth-child(3){
+    display: none;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #004BA8;
+    color: white;
+}
+
+aside p{
+    font-size: .7em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+aside label{
+    margin-bottom: 5px;
+}
+aside input{
+    margin: 5px 0;
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+}
+
+.fa-linkedin,
+.fa-github{
+    color: white;
+    font-size: 40px;
+}
+.fa-linkedin:hover,
+.fa-github:hover{
+    transition: color .2s ease-in-out;
+    color: rgb(0, 119, 255);
+    font-size: 40px;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD400;
+}
+
+footer p{
+    padding: 15px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+}
+
+main{
+    background-color: #F6F7EB;
+}
+
+
+/* Home page styles -------------------------------*/
+
+.profile-container{
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid black;
+    margin: 20px 0 0 0;
+}
+
+.profile-container h3{
+    margin-left: 25px;
+}
+
+.home-h4{
+    margin-left: 106px;
+    padding-top: 200px;
+}
+
+.home-p{
+    width: 80%;
+    margin-left: 100px;
+    padding: 20px 20px;
+}
+/* Blog Styles -------------------------------------*/
+
+.blog-main h2{
+    margin-left: 106px;
+    padding-top: 200px;
+}
+
+.blog-post-container{
+    background-color: silver;
+    margin: 20px 0 0 100px;
+    padding: 10px;
+    width: 80%;
+}
+
+.blog-post-container:hover{
+    transform: translateY(4px);
+}
+
+/* Projects page styles ---------------------------*/
+
+.projects-main h2{
+    margin-left: 106px;
+    padding-top: 200px;
+}
+
+.projects-main p{
+    width: 80%;
+    margin-left: 100px;
+    padding: 20px 20px;
+}
+
+/* Contact page styles ----------------------------*/
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.contact-container p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.contact-container label{
+    margin: 5px 0;
+}
+
+.contact-container input{
+    margin: 5px 0;
+}
+
+input[type="submit"]{
+    /* background-color: rgb(80, 80, 80); */
+    padding: 5px 0;
+    /* color: white; */
+    letter-spacing: .1em;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover{
+    transition: background-color .2s ease-in-out;
+    background-color: rgb(12, 11, 11);
+    padding: 5px 0;
+    color: white;
+    letter-spacing: .1em;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: vertical;
+}
+/* Media queries */
+
+@media only screen and (max-width: 460px) {
+    body {
+        grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "main main main"
+            "footer footer footer";
+    }
+    aside, .twitter{
+        display: none;
+    }
+
+    .home-h4{
+        margin-left: 46px;
+        padding-top: 50px;
+    }
+    
+    .home-p{
+        width: 80%;
+        margin-left: 40px;
+        padding: 20px 20px;
+    }
+
+    .projects-main h2{
+        margin-left: 46px;
+        padding-top: 50px;
+    }
+    
+    .projects-main p{
+        width: 80%;
+        margin-left: 40px;
+        padding: 20px 20px;
+    }
+
+    .socials{}
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "main main main"
+            "footer footer footer";
+    }
+    aside, .twitter{
+        display: none;
+    }
+
+    .menu :nth-child(3){
+        display: block;
+    }
+
+    .home-h4{
+        margin-left: 46px;
+        padding-top: 50px;
+    }
+    
+    .home-p{
+        width: 80%;
+        margin-left: 40px;
+        padding: 20px 20px;
+    }
+
+    .projects-main h2{
+        margin-left: 46px;
+        padding-top: 50px;
+    }
+    
+    .projects-main p{
+        width: 80%;
+        margin-left: 40px;
+        padding: 20px 20px;
+    }
+
+    .socials{
+        margin: 5px auto;
+        width: 20%%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fa-linkedin,
+    .fa-twitter-square,
+    .fa-github{
+    color: #0a66c2;
+    font-size: 40px;
+}
+
+}
